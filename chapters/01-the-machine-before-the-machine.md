@@ -12,25 +12,11 @@ The continuity is not "old AI versus new AI."
 
 It is the attempt to move from human procedure to machine procedure without losing the structure of the problem.
 
-<pre>
-REAL WORLD
-    │
-    ▼
-HUMAN DESCRIPTION
-    │
-    ▼
-SYMBOLS + RULES
-    │
-    ├──► narrow, clean domain ──► works
-    │
-    └──► messy reality ─────────► breaks
-</pre>
-
 ## The early idea
 
 Alan Turing's 1950 paper, Computing Machinery and Intelligence, asked whether machinery could exhibit behavior we would describe as intelligent. The question was deliberately operational.
 
-The 1956 Dartmouth proposal then gave the field a name and framed a research program around the possibility that learning and intelligence might be sufficiently described to be simulated by machines.
+The 1955 proposal for the 1956 Dartmouth project then gave the field a name and framed a research program around the possibility that learning and intelligence might be sufficiently described to be simulated by machines.
 
 Early systems were mostly symbolic. They stored facts, manipulated symbols and followed explicit rules.
 
@@ -53,25 +39,6 @@ the engineer could ask:
 That introduced a new dependency: data.
 
 Neural networks mattered because they made it practical to learn useful internal representations from large datasets.
-
-<pre>
-SYMBOLIC RULES
-     │
-     ▼
-STATISTICAL LEARNING
-     │
-     ▼
-DEEP LEARNING
-     │
-     ▼
-TRANSFORMERS
-     │
-     ▼
-FOUNDATION MODELS
-     │
-     ▼
-MODELS + TOOLS + RETRIEVAL + AGENTS
-</pre>
 
 ## The Transformer shift
 
@@ -138,3 +105,21 @@ Do not ask only:
 Ask:
 
 > What happens when a useful intelligence becomes cheap enough, connected enough and autonomous enough to participate in the world?
+
+## A practical experiment: rules, examples and evidence
+
+Build a tiny classifier for fictional support messages. First use explicit rules, such as routing messages containing a known product code. Then ask a language model to classify the same messages from a written policy. Include ambiguous wording, missing information and a message that quotes a product code without asking about it.
+
+Compare the two approaches on accuracy, explainability, maintenance effort and failure behavior. The rule system may be easier to audit but brittle when wording changes. The model may handle varied language while introducing unsupported interpretations. A hybrid can use the model to propose a category and deterministic code to enforce permitted actions. Neither architecture is universally superior.
+
+Your outcome is a short experiment report with the examples, policy, model identifier and disagreements. Do not call the model intelligent merely because it agrees with you; check whether your own labels were well defined. Ask a second reviewer to label ambiguous cases independently.
+
+For setup, use a spreadsheet and any evaluated text model from [the model guide](31-models-and-workspace.md). No API or training run is required. Keep the inputs synthetic. The main challenge is confusing a demonstration with a general result. Solve it by stating the exact task and preserving failed cases.
+
+Historical sources: [Turing's 1950 paper](https://academic.oup.com/mind/article/LIX/236/433/986238), the [1955 Dartmouth proposal for the 1956 project](https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html), and the original [Transformer paper](https://arxiv.org/abs/1706.03762). These are milestones in a larger history, not a single inevitable ladder toward a particular future.
+
+---
+
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
+
+— Kingsley Umoh · PharmWeb3

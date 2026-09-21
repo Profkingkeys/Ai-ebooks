@@ -1,35 +1,43 @@
-# Technical References
+# Source ledger
 
-This list is weighted toward primary, institutional and standards sources.
+Primary documentation and other explicitly identified sources linked in this edition. Relevant citations remain beside the claims in each guide. Checked during the September 2026 editorial pass where accessible; model catalogs change. GitHub project links are implementation references, not proof of domain efficacy.
 
-## History and foundations
-
-- Alan Turing, Computing Machinery and Intelligence (1950): https://doi.org/10.1093/mind/LIX.236.433
-- Dartmouth AI conference history: https://home.dartmouth.edu/news/2024/07/dartmouth-ai-conference-legacy
-- Vaswani et al., Attention Is All You Need: https://arxiv.org/abs/1706.03762
-- Brown et al., Language Models are Few-Shot Learners: https://arxiv.org/abs/2005.14165
-- Ouyang et al., Training language models to follow instructions with human feedback: https://arxiv.org/abs/2203.02155
-
-## AI security
-
-- NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework
-- OWASP Top 10 for Large Language Model Applications: https://owasp.org/www-project-top-10-for-large-language-model-applications/
-- OpenTelemetry: https://opentelemetry.io/
-
-## Medicine and health
-
-- World Health Organization, Ethics and Governance of Artificial Intelligence for Health: https://www.who.int/publications/i/item/9789240029200
-- U.S. FDA, Artificial Intelligence and Machine Learning Enabled Medical Devices: https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices
-
-## Law and intellectual property
-
-- World Intellectual Property Organization, Artificial Intelligence and Intellectual Property: https://www.wipo.int/about-ip/en/artificial_intelligence/
-- For jurisdiction-specific legal work, primary statutes, regulations, court opinions and official procedural rules should outrank generated summaries.
-
-## Economy and work
-
-- International Labour Organization, Generative AI and Jobs: https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and-quality
-
-## Editorial use
-
-References support the claims they actually contain. Forecasts and design proposals remain explicitly labeled as forecasts or proposals.
+- [academic.oup.com/mind/article/LIX/236/433/986238](https://academic.oup.com/mind/article/LIX/236/433/986238)
+- [ai.google.dev/gemini-api/docs/models](https://ai.google.dev/gemini-api/docs/models)
+- [arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
+- [cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)
+- [deepmind.google/science/alphafold/](https://deepmind.google/science/alphafold/)
+- [dev.java/learn/getting-started/](https://dev.java/learn/getting-started/)
+- [dev.mysql.com/doc/refman/8.4/en/sql-prepared-statements.html](https://dev.mysql.com/doc/refman/8.4/en/sql-prepared-statements.html)
+- [developer.android.com/courses/android-basics-compose/course](https://developer.android.com/courses/android-basics-compose/course)
+- [developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
+- [developers.openai.com/api/docs/models](https://developers.openai.com/api/docs/models)
+- [doc.rust-lang.org/book/ch01-01-installation.html](https://doc.rust-lang.org/book/ch01-01-installation.html)
+- [docs.python.org/3/tutorial/venv.html](https://docs.python.org/3/tutorial/venv.html)
+- [docs.soliditylang.org/en/latest/security-considerations.html](https://docs.soliditylang.org/en/latest/security-considerations.html)
+- [github.com/Profkingkeys](https://github.com/Profkingkeys)
+- [github.com/Profkingkeys/Kid-Simulation](https://github.com/Profkingkeys/Kid-Simulation)
+- [github.com/Profkingkeys/PharmWeb3/tree/main/labs/mobile/hybrid-webview](https://github.com/Profkingkeys/PharmWeb3/tree/main/labs/mobile/hybrid-webview)
+- [github.com/Profkingkeys/PharmWeb3/tree/main/production/trading](https://github.com/Profkingkeys/PharmWeb3/tree/main/production/trading)
+- [github.com/Profkingkeys/Pharma-Simulation](https://github.com/Profkingkeys/Pharma-Simulation)
+- [kotlinlang.org/docs/command-line.html](https://kotlinlang.org/docs/command-line.html)
+- [pandas.pydata.org/docs/getting_started/intro_tutorials/index.html](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html)
+- [platform.claude.com/docs/en/models/overview](https://platform.claude.com/docs/en/models/overview)
+- [remix-ide.readthedocs.io/en/latest/run.html](https://remix-ide.readthedocs.io/en/latest/run.html)
+- [scikit-learn.org/stable/common_pitfalls.html](https://scikit-learn.org/stable/common_pitfalls.html)
+- [www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html](https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html)
+- [www.americanbar.org/groups/professional_responsibility/publications/ethics_opinions/](https://www.americanbar.org/groups/professional_responsibility/publications/ethics_opinions/)
+- [www.cdc.gov/clean-hands/about/](https://www.cdc.gov/clean-hands/about/)
+- [www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/AITradingBots.html](https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/AITradingBots.html)
+- [www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers](https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers)
+- [www.fda.gov/patients/learn-about-drug-and-device-approvals/drug-development-process](https://www.fda.gov/patients/learn-about-drug-and-device-approvals/drug-development-process)
+- [www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures](https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures)
+- [www.gamblingcommission.gov.uk/public-and-players/guide/page/return-to-player-how-much-gaming-machines-payout](https://www.gamblingcommission.gov.uk/public-and-players/guide/page/return-to-player-how-much-gaming-machines-payout)
+- [www.gutenberg.org/ebooks/10](https://www.gutenberg.org/ebooks/10)
+- [www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins](https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins)
+- [www.learningscientists.org/downloadable-materials](https://www.learningscientists.org/downloadable-materials)
+- [www.linkedin.com/in/prof-king-keys-110a24229](https://www.linkedin.com/in/prof-king-keys-110a24229)
+- [www.nist.gov/itl/ai-risk-management-framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [www.w3.org/WAI/tutorials/](https://www.w3.org/WAI/tutorials/)
+- [www.who.int/publications/i/item/9789240029200](https://www.who.int/publications/i/item/9789240029200)
+- [x.com/Profkingkeys](https://x.com/Profkingkeys)

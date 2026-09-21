@@ -20,29 +20,6 @@ The defense needs automation too.
 
 ## The defensive loop
 
-<pre>
-INCOMING MESSAGE
-       │
-       ▼
-CLAIM EXTRACTION
-       │
-       ▼
-IDENTITY / FACT CHECKS
-       │
-       ▼
-RISK SIGNALS
-       │
-   ┌───┴────┐
-   ▼        ▼
-LOW RISK  HIGH RISK
-            │
-            ▼
-     STEP-UP VERIFICATION
-            │
-            ▼
-     HUMAN CONFIRMATION
-</pre>
-
 The assistant should not say:
 
 > This message is definitely a scam.
@@ -111,26 +88,26 @@ It is not identity proof.
 
 If AI lowers the cost of deception, AI can also lower the cost of verification.
 
-<pre>
-AUTOMATED ATTACK
-      │
-      ▼
- MORE DECEPTION
-      │
-      ▼
- MORE SIGNAL + NOISE
-      │
-      ▼
-AUTOMATED VERIFICATION
-      │
-      ▼
- BETTER FILTERING
-      │
-      └────► next attack / defense cycle
-</pre>
-
 The future is unlikely to be humans versus AI.
 
 It is more likely to be systems containing AI on both sides.
 
 The useful defense is stronger identity, better evidence and fewer irreversible mistakes.
+
+## Build a verification assistant, not an accusation machine
+
+Use ten fictional messages: ordinary requests, ambiguous messages and obvious attempts to bypass a normal process. Ask the model to extract the claimed sender, requested action, payment destination if any, urgency and missing verification. It should identify risk signals without declaring a person guilty of fraud.
+
+Keep verification channels independent. A phone number included in a suspicious message is not an independent callback route. Use contact information already established through a trusted process. For a payment-change request, the useful outcome is a verified decision by the responsible person, not a model-generated confidence percentage.
+
+Measure whether the assistant preserves the original claim and recommends a relevant check. Include benign urgent messages to reveal false alarms. Do not upload real personal messages into a service without an appropriate permission and privacy basis. Never let the assistant move money merely because it judged a message low risk.
+
+Your project can be a source-bounded checklist generator with no sending or payment permissions. Use a text model from [the setup guide](31-models-and-workspace.md), or begin with a rule-based baseline. Deliver the fictional dataset, rubric, observed errors and a short explanation of the human verification step.
+
+The hard part is often social: people feel pressure to act quickly for someone who appears important. Design the workflow so pausing and checking is normal. The [NIST AI risk framework](https://www.nist.gov/itl/ai-risk-management-framework) provides a broader reference for context, measurement and accountability. Your own threat model should name the actual users, assets and decisions involved.
+
+---
+
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
+
+— Kingsley Umoh · PharmWeb3

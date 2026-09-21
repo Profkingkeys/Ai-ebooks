@@ -1,6 +1,7 @@
 name: book-quality
 on:
   push:
+    branches: [main]
   pull_request:
 permissions:
   contents: read
@@ -13,4 +14,58 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
       - run: npm test
+      - run: npm run test:labs
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: practical-ai-library
+          path: dist/
+  language-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Compile and verify Java example
+        run: |
+          javac labs/stack-examples/RequestCheck.java
+          java -cp labs/stack-examples RequestCheck
+      - name: Compile and verify Rust example
+        run: |
+          rustc --version
+          rustc --test labs/stack-examples/request_check.rs -o /tmp/request-check-tests
+          /tmp/request-check-tests
+          rustc labs/stack-examples/request_check.rs -o /tmp/request-check
+          /tmp/request-check
+  release:
+    if: github.event_name == 'push'
+    needs: [validate, language-examples]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: practical-ai-library
+          path: dist
+      - name: Package the complete offline edition
+        working-directory: dist
+        run: zip -r ../AI-Library.zip .
+      - name: Publish downloadable ebooks
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if ! gh release view v0.2.0 >/dev/null 2>&1; then
+            gh release create v0.2.0 --target "$GITHUB_SHA" --title "The Practical AI Library 0.2" --notes "32 educational field guides. Download AI-Library.html for the complete offline reader, or the ZIP for individual standalone ebooks. Includes the Data Analysis with AI guide and reproducible lab."
+          fi
+          cp dist/books/32-data-analysis-with-ai.html dist/Data-Analysis-with-AI.html
+          gh release upload v0.2.0 dist/AI-Library.html dist/Data-Analysis-with-AI.html AI-Library.zip --clobber

@@ -10,32 +10,6 @@ AI can shrink that gap.
 
 ## The capability stack
 
-<pre>
-HUMAN IDEA
-   │
-   ▼
-SPECIFICATION
-   │
-   ▼
-ARCHITECTURE
-   │
-   ▼
-AI CODE GENERATION
-   │
-   ▼
-TESTS
-   │
-   ▼
-DEPLOYMENT
-   │
-   ▼
-USERS
-   │
-   ▼
-FEEDBACK
-   └────────► better specification
-</pre>
-
 The model does not need to invent the whole product.
 
 It can compress the time between design decisions.
@@ -102,25 +76,6 @@ An impressive interface can hide an empty product. A stronger design begins by n
 
 Consider a health-learning simulation. “Build a 3D house” is a rendering task. “Help a child rehearse washing hands after using the toilet and before touching food” is a product hypothesis.
 
-<pre>
-USER + CONTEXT
-      │
-      ▼
-OBSERVABLE DECISION
-      │
-      ▼
-SAFE CONSEQUENCE
-      │
-      ▼
-EXPLANATION
-      │
-      ▼
-RETRY
-      │
-      ▼
-LEARNING EVIDENCE
-</pre>
-
 Once the loop is explicit, technology choices become easier. Three.js can deliver the browser experience. A small state machine can own the rules. Tests can exercise correct and incorrect routes without rendering a single frame. Telemetry can measure progression without collecting a child's identity.
 
 That is how a strange new idea becomes an inspectable system rather than a cinematic demo.
@@ -145,3 +100,21 @@ Once the problem is decomposed, AI can generate the boring parts quickly.
 The strange idea stops looking impossible.
 
 That is the leverage.
+
+## A capstone that connects ambition to a real user
+
+Choose one of three projects: an offline learning game, an authorized operational-data quality report, or a source-linked evidence organizer. Write a one-page specification naming the user, decision, inputs, outputs, failure consequences and success measure. Build only the path needed to demonstrate the complete loop.
+
+For the game, connect an explanation to each choice and make retry meaningful. For the data report, preserve raw records and reconcile every exclusion. For the evidence organizer, attach sources and show uncertainty. These are different products; forcing the same agent architecture onto all three would obscure their needs.
+
+Use [vibe coding](09-vibecoding.md) for implementation and [model setup](31-models-and-workspace.md) for any AI component. Begin with synthetic data and a non-AI baseline. Deliver source, setup instructions, a reproducible demonstration, tests for important failures and a limitations statement.
+
+Ask an intended user to attempt the task while you observe. Do not coach them through every confusing control and then claim the interface is intuitive. Record where they hesitate, what they misunderstand and whether the product changes the decision you intended. Seek appropriate consent and domain review for sensitive settings.
+
+Your future step is to improve the weakest observed part, not add another technology badge. If the prototype has no useful effect, change the hypothesis. If it helps, investigate the cost of maintaining it and the evidence needed before broader use. AI can make experimentation cheaper; the builder still has to earn the conclusion that the product matters.
+
+---
+
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
+
+— Kingsley Umoh · PharmWeb3

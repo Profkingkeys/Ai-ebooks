@@ -6,18 +6,6 @@ A technology can be powerful and still have a small economic effect if it is exp
 
 Economic effect expands when capability, cost, usability and trust move together.
 
-<pre>
-CAPABILITY
-    │
-    ▼
-USABILITY ─────► ADOPTION ─────► ECONOMIC EFFECT
-    ▲                ▲
-    │                │
-INFERENCE COST ─────┘
-                     ▲
-                   TRUST
-</pre>
-
 ## Productivity is not the whole story
 
 Suppose an engineer writes code twice as fast.
@@ -102,3 +90,21 @@ As generated information becomes abundant, other resources become more valuable:
 - human judgment
 
 That is one of the deepest economic questions raised by AI.
+
+## Work the economics with a complete denominator
+
+Consider a fictional service processing 100 tasks. One model costs 10 currency units and needs 40 units of human correction. Another costs 20 and needs 10 of correction. Before other costs, the totals are 50 and 30. The cheaper model call produced the more expensive workflow. If the second system completes fewer usable tasks, however, that comparison must change again.
+
+Measure cost per successful task including retries, review, infrastructure and failure handling. Define success from the user's perspective. A generated report that nobody can use is not a completed task simply because the API returned text. Compare against the existing non-AI process, including its limitations.
+
+Create a spreadsheet with task volume, model cost, review time, labor rate, failure rate and fixed costs. Vary one assumption at a time. Ask AI to identify omitted costs and ambiguous definitions, then verify the arithmetic with formulas. The outcome is a sensitivity model, not a forecast of guaranteed savings.
+
+A common challenge is counting time saved in one activity while ignoring the new work created elsewhere. Interview the people who review and maintain the system. Another is assuming all technical capability becomes demand. Test whether a customer actually values the result and will change their workflow to use it.
+
+Read [building income with AI](23-building-income-with-ai.md) for a practical customer experiment and [data analysis](32-data-analysis-with-ai.md) for denominator checks. The economic claims in this chapter are reasoning frameworks and hypothetical examples, not measured forecasts about employment or national growth.
+
+---
+
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
+
+— Kingsley Umoh · PharmWeb3

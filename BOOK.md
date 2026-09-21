@@ -1,68 +1,65 @@
-# Book Map
+# The Practical AI Library
 
-## Promise to the reader
+**32 field guides for building, learning and solving useful problems.**
 
-By the end of this series, a reader should be able to inspect an AI product and reason about more than the prompt. They should be able to map its data, trust boundaries, tool permissions, evidence quality, failure modes, economic incentives, and human accountability.
+By Kingsley Umoh · Edition 0.2 · 21 September 2026
 
-## Volume I: The Machinery
+Read in any order. Start with model setup (31), practical coding (09), or data analysis (32). Each guide includes a concrete exercise and an honest statement of its limits. These are practical short guides, not accredited professional textbooks.
 
-1. [The Machine Before the Machine](chapters/01-the-machine-before-the-machine.md)  
-   How centuries of logic, statistics, computation, and institutional ambition converged.
-2. [What an AI System Actually Is](chapters/02-what-an-ai-system-actually-is.md)  
-   Models, context windows, embeddings, retrieval, agents, memory, tools, and evaluation.
-3. [AI Security](chapters/03-ai-security.md)  
-   Prompt injection, tool abuse, data exfiltration, identity, supply chains, and incident response.
-4. [Using AI to Defend Against AI](chapters/04-using-ai-to-defend-against-ai.md)  
-   Detection, provenance, authentication, scam resistance, and human verification.
+## Foundations
 
-## Volume II: Institutions Under Pressure
+- **01.** [The Machine Before the Machine](chapters/01-the-machine-before-the-machine.md)
+- **02.** [What an AI System Actually Is](chapters/02-what-an-ai-system-actually-is.md)
+- **03.** [AI Security](chapters/03-ai-security.md)
+- **04.** [Using AI to Defend Against AI](chapters/04-using-ai-to-defend-against-ai.md)
 
-5. [AI in Medicine](chapters/05-ai-in-medicine.md)  
-   Clinical evidence, distribution shift, decision support, monitoring, and responsibility.
-6. [AI in Pharmacy](chapters/06-ai-in-pharmacy.md)  
-   Medication systems, reconciliation, compounding research, pharmacovigilance, and simulation.
-7. [AI in Law](chapters/07-ai-in-law.md)  
-   Citation integrity, evidence provenance, discovery, privilege, and human accountability.
-8. [AI and the Economy](chapters/08-ai-and-the-economy.md)  
-   Task substitution, complements, market power, productivity, labor transitions, and access.
+## Professions & economy
 
-## Volume III: The Builder
+- **05.** [Medicine with AI: Become More Careful, Capable and Useful](chapters/05-ai-in-medicine.md)
+- **06.** [Pharmacy with AI: Build Expertise Around the Medicine and the Person](chapters/06-ai-in-pharmacy.md)
+- **07.** [Enhance Legal Practice with AI: Verify the Authority Behind the Sentence](chapters/07-ai-in-law.md)
+- **08.** [AI and the Economy](chapters/08-ai-and-the-economy.md)
 
-9. [Vibecoding](chapters/09-vibecoding.md)  
-   Fast creation, hidden debt, specifications, tests, review, and responsible acceleration.
-10. [Debugging](chapters/10-debugging.md)  
-    Observability, reproducibility, fault isolation, evaluations, and incident learning.
-11. [Building Things That Did Not Exist](chapters/11-building-things-that-did-not-exist.md)  
-    Turning a neglected problem into a trustworthy product and measurable intervention.
-12. [The Future and What Could Trigger It](chapters/12-the-future-and-what-could-trigger-it.md)  
-    Capability triggers, infrastructure constraints, governance, scenarios, and signposts.
+## Engineering
 
-## Recurring system model
+- **09.** [Vibe Coding Across the Stack: From an Idea to Software You Can Explain](chapters/09-vibecoding.md)
+- **10.** [Debugging](chapters/10-debugging.md)
+- **11.** [Building Things That Did Not Exist](chapters/11-building-things-that-did-not-exist.md)
+- **12.** [The Future and What Could Trigger It](chapters/12-the-future-and-what-could-trigger-it.md)
 
-```mermaid
-flowchart TD
-    I[Intent] --> C[Context]
-    C --> M[Model]
-    R[Retrieval] --> C
-    M --> O[Output]
-    M --> T[Tool request]
-    ID[Identity and policy] --> G{Authorization gate}
-    T --> G
-    G -->|allow| A[Action]
-    G -->|deny| X[Safe refusal]
-    A --> E[Evidence, logs, outcome]
-    O --> E
-    E --> H[Human review]
-    H --> C
-```
+## Markets & probability
 
-The dangerous gap is the distance between fluent output and authorized action. The valuable gap is the distance between a human question and inspectable evidence.
+- **13.** [Forex with AI: Build a Research Desk Before a Trading Bot](chapters/13-forex-with-ai.md)
+- **14.** [Stocks with AI: Turn Filings into Questions You Can Verify](chapters/14-stocks-with-ai.md)
+- **15.** [Crypto with AI: Investigate the System Behind the Price](chapters/15-crypto-with-ai.md)
+- **16.** [Betting, Probability and AI: Learn the Mathematics Before Believing the Tip](chapters/16-betting-probability-with-ai.md)
 
-## Reader routes
+## Life & creativity
 
-- **Builder:** 2 → 3 → 9 → 10 → 11
-- **Healthcare professional:** 2 → 3 → 5 → 6 → 10
-- **Leader or policymaker:** 1 → 3 → 7 → 8 → 12
-- **Security practitioner:** 2 → 3 → 4 → 10 → 12
+- **17.** [Bible Study and Prayer with AI: Let the Tool Point Back to Scripture](chapters/17-christian-bible-study-and-prayer.md)
+- **18.** [Sing and Play with AI: Build a Practice Partner, Keep Your Own Voice](chapters/18-music-and-singing-with-ai.md)
+- **19.** [Study with AI: Turn “I Understand” into “I Can Recall and Apply”](chapters/19-academic-study-with-ai.md)
+- **20.** [Create Content with AI: Earn Attention by Being Useful](chapters/20-content-creation-with-ai.md)
+- **21.** [Professional Graphic Design with AI: Make the Message Easy to See](chapters/21-graphic-design-with-ai.md)
+- **22.** [Professional Video with AI: Plan the Story Before Generating the Shot](chapters/22-professional-video-with-ai.md)
+- **23.** [Building Wealth with AI: Start with a Customer, Not a Millionaire Promise](chapters/23-building-income-with-ai.md)
+- **24.** [Cook with AI: Learn the Technique, Taste the Result](chapters/24-cooking-with-ai.md)
 
-See [GLOSSARY.md](GLOSSARY.md) for shared terms and [LABS.md](LABS.md) for exercises.
+## Impact & advanced practice
+
+- **25.** [Digital Marketing with AI: Measure the Customer's Decision](chapters/25-digital-marketing-with-ai.md)
+- **26.** [Pitch Investors with AI: Make the Evidence Easy to Question](chapters/26-pitching-investors-with-ai.md)
+- **27.** [AI for Disease Discovery: Turn a Bold Question into a Testable Hypothesis](chapters/27-ai-for-disease-discovery.md)
+- **28.** [Building Toward AGI: A Research Roadmap, Not a Secret Recipe](chapters/28-agi-research-roadmap.md)
+- **29.** [Superintelligence: Study the Possibility Without Pretending It Is Solved](chapters/29-superintelligence-research.md)
+- **30.** [AI for Public Good: Find the Bottleneck People Actually Live With](chapters/30-ai-for-public-good.md)
+- **31.** [Choose Models and Set Up a Workspace That You Can Trust](chapters/31-models-and-workspace.md)
+- **32.** [Data Analysis with AI: Find the Signal, Prove the Result](chapters/32-data-analysis-with-ai.md)
+
+
+
+---
+
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
+
+— Kingsley Umoh · PharmWeb3

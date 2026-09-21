@@ -1,0 +1,226 @@
+[
+  {
+    "number": 1,
+    "file": "01-the-machine-before-the-machine.md",
+    "title": "The Machine Before the Machine",
+    "group": "Foundations",
+    "words": 750
+  },
+  {
+    "number": 2,
+    "file": "02-what-an-ai-system-actually-is.md",
+    "title": "What an AI System Actually Is",
+    "group": "Foundations",
+    "words": 681
+  },
+  {
+    "number": 3,
+    "file": "03-ai-security.md",
+    "title": "AI Security",
+    "group": "Foundations",
+    "words": 664
+  },
+  {
+    "number": 4,
+    "file": "04-using-ai-to-defend-against-ai.md",
+    "title": "Using AI to Defend Against AI",
+    "group": "Foundations",
+    "words": 614
+  },
+  {
+    "number": 5,
+    "file": "05-ai-in-medicine.md",
+    "title": "Medicine with AI: Become More Careful, Capable and Useful",
+    "group": "Professions & economy",
+    "words": 692
+  },
+  {
+    "number": 6,
+    "file": "06-ai-in-pharmacy.md",
+    "title": "Pharmacy with AI: Build Expertise Around the Medicine and the Person",
+    "group": "Professions & economy",
+    "words": 693
+  },
+  {
+    "number": 7,
+    "file": "07-ai-in-law.md",
+    "title": "Enhance Legal Practice with AI: Verify the Authority Behind the Sentence",
+    "group": "Professions & economy",
+    "words": 635
+  },
+  {
+    "number": 8,
+    "file": "08-ai-and-the-economy.md",
+    "title": "AI and the Economy",
+    "group": "Professions & economy",
+    "words": 575
+  },
+  {
+    "number": 9,
+    "file": "09-vibecoding.md",
+    "title": "Vibe Coding Across the Stack: From an Idea to Software You Can Explain",
+    "group": "Engineering",
+    "words": 1766
+  },
+  {
+    "number": 10,
+    "file": "10-debugging.md",
+    "title": "Debugging",
+    "group": "Engineering",
+    "words": 581
+  },
+  {
+    "number": 11,
+    "file": "11-building-things-that-did-not-exist.md",
+    "title": "Building Things That Did Not Exist",
+    "group": "Engineering",
+    "words": 729
+  },
+  {
+    "number": 12,
+    "file": "12-the-future-and-what-could-trigger-it.md",
+    "title": "The Future and What Could Trigger It",
+    "group": "Engineering",
+    "words": 744
+  },
+  {
+    "number": 13,
+    "file": "13-forex-with-ai.md",
+    "title": "Forex with AI: Build a Research Desk Before a Trading Bot",
+    "group": "Markets & probability",
+    "words": 693
+  },
+  {
+    "number": 14,
+    "file": "14-stocks-with-ai.md",
+    "title": "Stocks with AI: Turn Filings into Questions You Can Verify",
+    "group": "Markets & probability",
+    "words": 641
+  },
+  {
+    "number": 15,
+    "file": "15-crypto-with-ai.md",
+    "title": "Crypto with AI: Investigate the System Behind the Price",
+    "group": "Markets & probability",
+    "words": 649
+  },
+  {
+    "number": 16,
+    "file": "16-betting-probability-with-ai.md",
+    "title": "Betting, Probability and AI: Learn the Mathematics Before Believing the Tip",
+    "group": "Markets & probability",
+    "words": 621
+  },
+  {
+    "number": 17,
+    "file": "17-christian-bible-study-and-prayer.md",
+    "title": "Bible Study and Prayer with AI: Let the Tool Point Back to Scripture",
+    "group": "Life & creativity",
+    "words": 733
+  },
+  {
+    "number": 18,
+    "file": "18-music-and-singing-with-ai.md",
+    "title": "Sing and Play with AI: Build a Practice Partner, Keep Your Own Voice",
+    "group": "Life & creativity",
+    "words": 671
+  },
+  {
+    "number": 19,
+    "file": "19-academic-study-with-ai.md",
+    "title": "Study with AI: Turn \u201cI Understand\u201d into \u201cI Can Recall and Apply\u201d",
+    "group": "Life & creativity",
+    "words": 674
+  },
+  {
+    "number": 20,
+    "file": "20-content-creation-with-ai.md",
+    "title": "Create Content with AI: Earn Attention by Being Useful",
+    "group": "Life & creativity",
+    "words": 658
+  },
+  {
+    "number": 21,
+    "file": "21-graphic-design-with-ai.md",
+    "title": "Professional Graphic Design with AI: Make the Message Easy to See",
+    "group": "Life & creativity",
+    "words": 658
+  },
+  {
+    "number": 22,
+    "file": "22-professional-video-with-ai.md",
+    "title": "Professional Video with AI: Plan the Story Before Generating the Shot",
+    "group": "Life & creativity",
+    "words": 655
+  },
+  {
+    "number": 23,
+    "file": "23-building-income-with-ai.md",
+    "title": "Building Wealth with AI: Start with a Customer, Not a Millionaire Promise",
+    "group": "Life & creativity",
+    "words": 686
+  },
+  {
+    "number": 24,
+    "file": "24-cooking-with-ai.md",
+    "title": "Cook with AI: Learn the Technique, Taste the Result",
+    "group": "Life & creativity",
+    "words": 899
+  },
+  {
+    "number": 25,
+    "file": "25-digital-marketing-with-ai.md",
+    "title": "Digital Marketing with AI: Measure the Customer's Decision",
+    "group": "Impact & advanced practice",
+    "words": 625
+  },
+  {
+    "number": 26,
+    "file": "26-pitching-investors-with-ai.md",
+    "title": "Pitch Investors with AI: Make the Evidence Easy to Question",
+    "group": "Impact & advanced practice",
+    "words": 651
+  },
+  {
+    "number": 27,
+    "file": "27-ai-for-disease-discovery.md",
+    "title": "AI for Disease Discovery: Turn a Bold Question into a Testable Hypothesis",
+    "group": "Impact & advanced practice",
+    "words": 714
+  },
+  {
+    "number": 28,
+    "file": "28-agi-research-roadmap.md",
+    "title": "Building Toward AGI: A Research Roadmap, Not a Secret Recipe",
+    "group": "Impact & advanced practice",
+    "words": 673
+  },
+  {
+    "number": 29,
+    "file": "29-superintelligence-research.md",
+    "title": "Superintelligence: Study the Possibility Without Pretending It Is Solved",
+    "group": "Impact & advanced practice",
+    "words": 674
+  },
+  {
+    "number": 30,
+    "file": "30-ai-for-public-good.md",
+    "title": "AI for Public Good: Find the Bottleneck People Actually Live With",
+    "group": "Impact & advanced practice",
+    "words": 661
+  },
+  {
+    "number": 31,
+    "file": "31-models-and-workspace.md",
+    "title": "Choose Models and Set Up a Workspace That You Can Trust",
+    "group": "Impact & advanced practice",
+    "words": 785
+  },
+  {
+    "number": 32,
+    "file": "32-data-analysis-with-ai.md",
+    "title": "Data Analysis with AI: Find the Signal, Prove the Result",
+    "group": "Impact & advanced practice",
+    "words": 1580
+  }
+]

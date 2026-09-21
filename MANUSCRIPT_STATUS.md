@@ -1,24 +1,11 @@
-# Manuscript Status
+# Manuscript status
 
-Honest maturity labels make the project more credible and easier to review.
+Edition 0.2 contains 32 practical short guides, approximately 23725 words including code, tables and follow links. It expands the original twelve foundation chapters. It is not presented as thirty-two full-length textbooks.
 
-| Area | Current state | Exit criterion |
-|---|---|---|
-| 12 chapter foundations | complete | all chapters present and navigable |
-| Long-form technical expansion | in progress | mechanism, case study, lab, checklist, references per chapter |
-| Primary-source citation pass | in progress | claim-level citation ledger for unstable or high-stakes claims |
-| Technical review | recruiting | reviewer notes resolved or explicitly recorded |
-| Copy edit | planned | consistent voice, terminology, and diagram language |
-| Web edition | foundation | Pages build verified and accessibility audited |
-| PDF/EPUB | planned | reproducible release workflow and visual QA |
+The reader is built from the Markdown sources. Editorial checks validate structure and local links; code checks validate selected examples. They do not establish clinical, legal, financial or educational efficacy. Independent subject-matter review remains open.
 
-## Definition of a publishable chapter
+Model examples were checked against official catalogs on 21 September 2026; availability and pricing must be rechecked before use. The collection makes no claim that paid providers were evaluated with live credentials.
 
-- clear promise and target reader
-- at least one systems diagram and one worked example
-- a threat or failure model where relevant
-- implementable architecture or decision framework
-- reproducible lab or review exercise
-- evidence ledger with dates and source quality
-- high-stakes boundaries and known limitations
-- technical and editorial review status
+## Next editorial work
+
+Seek qualified reviews of the professional guides, add learner feedback, expand worked exercises, and maintain the source ledger. Report a specific passage, source and proposed correction when contributing.

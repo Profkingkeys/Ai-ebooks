@@ -1,82 +1,51 @@
-# AI: The New Operating Layer
+# The Practical AI Library
 
-**A technical field guide to building, securing, governing, and living with AI systems.**
+**Turn a strong idea into useful, verifiable work.**
 
-Most AI writing stops at the model. This series follows the entire system: intent, context, retrieval, tools, memory, permissions, evidence, action, failure, and accountability.
+32 practical guides by **Kingsley Umoh**, covering software, data analysis, healthcare learning, creative work, business and advanced AI research.
 
-[Start reading](BOOK.md) · [See manuscript status](MANUSCRIPT_STATUS.md) · [Use the labs](LABS.md) · [Review the method](RESEARCH_METHOD.md)
+[Browse all guides](BOOK.md) · [Download the offline reader](https://github.com/Profkingkeys/Ai-ebooks/releases/latest/download/AI-Library.html) · [Download the complete edition](https://github.com/Profkingkeys/Ai-ebooks/releases/latest/download/AI-Library.zip) · [Quality checks](https://github.com/Profkingkeys/Ai-ebooks/actions/workflows/book-quality.yml)
 
-## The central question
+## Start with something you can build
 
-When software can read private data, generate decisions, call tools, write code, and trigger real actions, “How intelligent is the model?” is no longer enough.
+- [Data Analysis with AI](chapters/32-data-analysis-with-ai.md): a complete messy-data project, Python, SQL, spreadsheets, visualization, statistics and reproducibility.
+- [Vibe coding across the stack](chapters/09-vibecoding.md): HTML, CSS, JavaScript, Python, Rust, Solidity, MySQL, Java, Kotlin and Android.
+- [Model selection and setup](chapters/31-models-and-workspace.md): current documented candidates, evaluation, privacy and cost controls.
+- [Disease discovery](chapters/27-ai-for-disease-discovery.md): evidence mapping and computational research, with clear limits on clinical claims.
+- [AGI research](chapters/28-agi-research-roadmap.md) and [superintelligence](chapters/29-superintelligence-research.md): bounded research paths, not guaranteed construction recipes.
 
-The harder questions are:
+The collection also covers medicine, pharmacy, law, forex, stocks, crypto, betting probability, Christian Bible study and prayer, singing and instruments, academic study, content, graphic design, video, building income, cooking, digital marketing and investor pitches. [See the full contents](BOOK.md).
 
-- What can the system reach?
-- Which evidence shaped the output?
-- What can manipulate it?
-- Who can authorize an action?
-- What remains when it fails?
+## A reader you can actually use
 
-```mermaid
-flowchart LR
-    H[Human intent] --> C[Context]
-    C --> M[Model]
-    D[Data and retrieval] --> M
-    M --> T[Tools]
-    T --> A[Action]
-    P[Policy and identity] --> T
-    A --> E[Evidence and telemetry]
-    E --> H
-```
+The downloadable HTML reader includes the complete manuscript, full-text guide filtering, topic navigation, light/dark themes, adjustable type, printable guides and individual HTML downloads. It has no CDN, account, analytics or paid-model dependency. Open the downloaded HTML in a modern browser. Source Markdown remains readable directly on GitHub.
 
-## Three volumes
+The ZIP contains the complete reader and one standalone HTML ebook per guide. Links to external references require a connection. Reading the content does not.
 
-| Volume | Core problem | Chapters |
-|---|---|---|
-| **I. The Machinery** | How AI systems work and fail | history, system anatomy, AI security, defense |
-| **II. Institutions Under Pressure** | How AI changes high-stakes work | medicine, pharmacy, law, economy |
-| **III. The Builder** | How to create without surrendering judgment | vibecoding, debugging, new products, possible futures |
+## Build and check
 
-## What makes this a technical book
-
-Every mature chapter is being developed around the same evidence contract:
-
-1. **Hook:** a concrete failure, decision, or paradox
-2. **System model:** the parts and trust boundaries
-3. **Mechanism:** what happens under the interface
-4. **Failure surface:** how the system breaks or is abused
-5. **Build pattern:** an implementable architecture
-6. **Lab:** a reproducible exercise
-7. **Evidence ledger:** sources, date, confidence, and unresolved questions
-8. **Field checklist:** what the reader can use immediately
-
-## Current scope
-
-The repository already contains twelve readable foundation chapters. They are **not being presented as a finished textbook**. The next editorial pass expands them into long-form technical chapters with primary references, worked examples, threat models, evaluation rubrics, and reproducible labs.
-
-High-stakes material uses explicit boundaries:
-
-- medicine and pharmacy distinguish research support from clinical authorization
-- legal material distinguishes information workflows from legal advice
-- finance distinguishes analysis from execution
-- forecasts are labeled as forecasts
-- AI-generated claims are never treated as evidence merely because they sound precise
-
-## Build and validate
+Install Node.js 22 LTS or later and Python 3:
 
 ```bash
+npm ci
 npm test
+npm run test:labs
+npm run build
 ```
 
-The validation pipeline checks chapter order, internal links, visual models, manuscript depth, and required publishing files. GitHub Actions runs it on every change and publishes the reading site through GitHub Pages.
+Open `dist/index.html` directly. `npm test` checks the catalog, required sections, internal file links and follow links; it cannot certify professional accuracy. The Python lab tests reconciliation and invalid inputs. CI also compiles and checks the Java and Rust examples.
 
-## Read online
+For GitHub Pages, open [repository Pages settings](https://github.com/Profkingkeys/Ai-ebooks/settings/pages), select **GitHub Actions**, then run **Deploy library to Pages** in Actions. This is inside the repository, not your personal profile settings. See [GitHub's official instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-The repository includes a Docsify reading shell for GitHub Pages. Markdown remains the source of truth, so the same manuscript can later produce HTML, PDF, and EPUB editions.
+## Editorial standard
 
-## Contribute
+These are educational field guides. Sources are linked near relevant claims; examples are explicitly synthetic where applicable. Paid models were not benchmarked for this edition. Medical, pharmacy, legal and financial material needs the appropriate professional judgment and jurisdiction-specific references. No claim of guaranteed grades, wealth, trading returns, disease cures, AGI or superintelligence is made.
 
-Expert review is welcome across AI engineering, cybersecurity, medicine, pharmacy, law, economics, education, and technical editing. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the [research method](RESEARCH_METHOD.md).
+[Manuscript status](MANUSCRIPT_STATUS.md) · [Evidence method](RESEARCH_METHOD.md) · [Sources](REFERENCES.md) · [Labs](LABS.md) · [Contribute](CONTRIBUTING.md)
 
-> Build the mental model first. Then earn the right to automate the action.
+
+---
+
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
+
+— Kingsley Umoh · PharmWeb3

@@ -1,161 +1,49 @@
-# 06 - AI in Pharmacy
+# 06 · Pharmacy with AI: Build Expertise Around the Medicine and the Person
 
-Pharmacy is unusually rich for AI because the profession sits at the intersection of chemistry, biology, pharmacology, logistics, patient behavior, regulation, economics and information systems.
+**A medicine can be correctly named, beautifully labeled and still be wrong for the person in front of you.**
 
-That creates many opportunities, but each workflow has a different safety threshold.
+Pharmacy combines scientific knowledge, formulation, supply systems, communication and professional judgment. AI can support study, evidence organization, stock analysis and reviewed information workflows. It cannot replace qualification, supervised practice or the pharmacist's responsibility. Becoming excellent means making better decisions consistently, including knowing when to stop and ask for help.
 
-## A pharmacy system is a chain
+## Setup a pharmacy learning workspace
 
-<pre>
-PATIENT
-  │
-  ▼
-HISTORY
-  │
-  ▼
-MEDICATION LIST
-  │
-  ▼
-DRUG DATA
-  │
-  ▼
-CLINICAL CHECKS
-  │
-  ▼
-PHARMACIST
-  │
-  ▼
-OUTCOME
-  │
-  ▼
-FOLLOW-UP
-</pre>
+Start with approved course materials, a local formulary or authorized reference, and fictional cases. Keep sources, dates and jurisdiction visible. Do not treat an overseas regulatory page as the standard for every country. For real professional work, follow applicable local law, institution procedures and current authoritative references.
 
-AI should not collapse the whole chain into "Ask AI what drug to give."
+Use a text model for source-bounded explanations, a coding model for administrative tools, and deterministic software for validated calculations. A model's confident dose or compatibility statement is not sufficient evidence. The [model guide](31-models-and-workspace.md) helps select tools, but pharmacy content needs domain review beyond general model benchmarks.
 
-A safe architecture preserves boundaries.
+## Understand extemporaneous dispensing
 
-## Medication reconciliation
+Extemporaneous dispensing prepares an appropriate formulation for a particular need under professional standards. It is not the same as molecular synthesis. A 3D game may use floating symbols to make inventory choices visible, but the learner must understand that these are abstractions.
 
-A model can extract:
+The [Pharma Simulation project](https://github.com/Profkingkeys/Pharma-Simulation) uses fictional nonsterile suspension, ointment and solution scenarios. It teaches review, work-area preparation, material verification, method, inspection, packaging, labeling and independent release. It deliberately omits actual doses, ingredient quantities and beyond-use dates. The [FDA compounding Q&A](https://www.fda.gov/drugs/human-drug-compounding/compounding-and-fda-questions-and-answers) describes contamination and strength-related risks in the US context; local standards still govern real practice.
 
-- drug names
-- strengths
-- dosage forms
-- frequencies
-- apparent duplicates
-- inconsistencies
+| Learning task | Useful AI support | Verification needed |
+|---|---|---|
+| Explain a mechanism | Adapt an approved explanation to your level | Compare with the source |
+| Practice counseling | Role-play a fictional patient | Review for accuracy and empathy |
+| Review a workflow | Identify missing documentation | Use the approved procedure |
+| Analyze stock records | Draft code and charts | Reconcile counts and assumptions |
+| Compare evidence | Build a study table | Verify every material claim |
 
-A deterministic validation layer can compare these fields with a medication database.
+## A counseling practice loop
 
-The pharmacist sees the conflicts.
+Choose a fictional case from approved teaching material. Write the counseling points yourself, then ask AI to play a patient who asks ordinary questions. Practice clear language and ask the simulated patient to explain the instructions back. Have a qualified educator check the exercise; a model-generated patient can misunderstand or reward incomplete counseling.
 
-The AI does not silently rewrite the record.
+Keep the exercise within the supplied reference. If the case lacks information needed for a safe answer, identify the missing information and appropriate escalation. Do not train yourself to fill every gap with a plausible response. A strong professional knows the difference between a question they can answer and one requiring further assessment.
 
-## Drug information assistance
+## Build a practical administrative tool
 
-A pharmacy assistant can help answer questions about:
+Use the [data-analysis lab](32-data-analysis-with-ai.md) to study synthetic supply requests. Reproduce the totals, inspect missing records and explain why descriptive differences do not establish their cause. This can lead to useful stock-reporting or audit software without making clinical decisions.
 
-- mechanism of action
-- drug class
-- interaction categories
-- monitoring parameters
-- counseling points
-- formulation information
+A prompt can say: “Review this fictional dispensing workflow against the supplied teaching card. Identify omitted checks, cite the card and mark uncertainty. Do not invent a formulation, dose, stability claim or beyond-use date.” The output is a review aid, not an authorized procedure.
 
-The key design decision is source grounding.
+## Challenges and next steps
 
-The assistant should use trusted references and expose citations when appropriate.
+Common failures include outdated references, unit confusion, invented citations, overconfident interaction claims and incomplete patient context. Address them with source dates, independent calculations, explicit uncertainty and qualified review. Do not test a preparation by tasting or self-administering it.
 
-## Compounding and formulation research
+Create a portfolio with a reviewed teaching scenario, a source-linked counseling exercise and a reproducible inventory analysis. Label your student status and the limits of each project. Seek feedback from pharmacists and educators, document revisions, and continue supervised practice. AI can help you study and build faster; professional trust comes from accuracy, care and accountability over time.
 
-AI can explore relationships between:
+---
 
-- excipient properties
-- release behavior
-- dosage form
-- stability data
-- material compatibility
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
 
-A generated formulation is still a hypothesis.
-
-Actual preparation and validation require laboratory work, quality control and applicable regulatory processes.
-
-AI narrows the search space.
-
-It does not make an untested formulation clinically valid.
-
-## Pharmacy automation
-
-<pre>
-ORDER
-  │
-  ▼
-VALIDATION
-  ├── dose
-  ├── duplication
-  ├── allergy
-  └── authorization
-  │
-  ▼
-DISPENSING
-  │
-  ▼
-COUNSELING
-  │
-  ▼
-FOLLOW-UP
-  │
-  ▼
-MONITORING
-</pre>
-
-AI can assist triage, documentation and communication.
-
-Deterministic rules should enforce high-confidence constraints.
-
-## Simulation before automation
-
-Some pharmacy problems are better served first by simulation than by a chatbot.
-
-Extemporaneous dispensing contains observable decisions: prescription verification, material identification, contamination avoidance, sequencing, packaging, labeling and counseling. A virtual lab can make those decisions visible without pretending to replace supervised practical training.
-
-<pre>
-LEARNING OBJECTIVE
-        │
-        ▼
-SCENARIO STATE ─────► 3D RENDERER
-        │                  │
-        ▼                  ▼
-DECISION ENGINE ◄──── PLAYER ACTION
-        │
-   ┌────┴────┐
-   ▼         ▼
-FEEDBACK   AUDIT EVENT
-   │         │
-   └────┬────┘
-        ▼
-RETRY + REFLECTION
-</pre>
-
-The renderer may be Three.js in a browser or Filament in a native application. The important engineering choice is to keep the educational rules outside the renderer. That makes progression testable and lets reviewers inspect exactly why a choice passes or fails.
-
-AI can later adapt explanations, identify repeated misconceptions or help instructors create scenario variants. It should not silently rewrite the correct dispensing sequence or invent a preparation formula. Curriculum content, deterministic safety gates and pharmacist review remain authoritative.
-
-## The future pharmacy
-
-The most interesting pharmacy AI may not look like a chatbot.
-
-It may look like infrastructure:
-
-- medication verification
-- pharmacovigilance monitoring
-- evidence graphs
-- supply-chain prediction
-- adherence support
-- pharmacist copilots
-- research assistants
-
-The pattern is simple:
-
-**AI proposes. Pharmacy systems verify. Pharmacists decide.**
+— Kingsley Umoh · PharmWeb3

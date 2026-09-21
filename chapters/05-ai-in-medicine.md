@@ -1,126 +1,49 @@
-# 05 - AI in Medicine
+# 05 · Medicine with AI: Become More Careful, Capable and Useful
 
-Medicine is where AI hype becomes expensive.
+**The note is fluent. The patient detail is wrong. In medicine, that difference matters more than how impressive the model sounds.**
 
-A bad output is not merely a software defect. It can alter triage, diagnosis, medication choice or treatment planning.
+AI can support medical education, documentation, literature review and appropriately validated clinical workflows. It does not confer a medical qualification or make someone the world's best doctor. Professional excellence grows through supervised training, sound judgment, communication, evidence and accountability. This guide builds a learning and information workflow, not a diagnostic or prescribing service.
 
-So the useful question is not:
+## Setup and model choice
 
-> Can AI diagnose disease?
+Choose one permitted task, such as summarizing a fictional consultation or organizing public research. Use synthetic cases for development. Define the source, intended user, clinical setting and what the system must not do. Obtain institutional approval before using real patient information, and verify contractual, privacy and security requirements for any external model.
 
-It is:
+A text model can draft a structured summary; a retrieval system can locate relevant passages. A general vision model is not interchangeable with a clinically validated imaging device. Performance must be established for the intended population and workflow. The [WHO AI-for-health guidance](https://www.who.int/publications/i/item/9789240029200) emphasizes governance and accountability; it does not certify a particular chatbot for clinical use.
 
-> Which parts of a clinical workflow can AI assist, under which evidence standard, with what oversight, and with what measurable failure rate?
+## Build a source-faithful summary
 
-## Where AI fits
+Create a fictional note containing symptoms, history, medications and deliberately missing information. Ask the model to extract only what is explicitly present, with a source span for each field. It must report “not documented” instead of converting absence into a negative finding. “No allergy recorded” and “patient has no allergies” are different statements.
 
-<pre>
-PATIENT DATA
-    │
-    ▼
-QUALITY CHECKS
-    │
-    ▼
-MODEL
-    │
-    ├────► EVIDENCE RETRIEVAL
-    │
-    ▼
-DECISION SUPPORT
-    │
-    ▼
-CLINICIAN
-    │
-    ▼
-ACTION
-    │
-    ▼
-OUTCOME + AUDIT
-</pre>
+Then introduce a contradiction, such as two different dates or a medication mentioned as both current and stopped. The correct behavior is to flag it for review. Do not let the model resolve the conflict by guessing. A clinician or authorized reviewer must reconcile the actual record.
 
-The clinician remains important because medicine contains context that may not be fully represented in the available data.
+| Field | Acceptable behavior | Dangerous shortcut |
+|---|---|---|
+| Symptoms | Preserve the patient's reported information | Add a typical symptom not mentioned |
+| Allergies | Distinguish absent documentation from a negative history | Assume none |
+| Medication status | Mark uncertainty or contradiction | Choose a status without evidence |
+| Assessment | Separate documented assessment from generated inference | Present a suggestion as the clinician's decision |
+| Patient explanation | Draft for review in clear language | Promise an outcome |
 
-## Imaging
+## Learn clinical reasoning without outsourcing it
 
-Medical imaging is a strong AI use case.
+For education, ask AI to generate questions about a supplied case, then answer before seeing feedback. Compare the reasoning with approved teaching materials and a supervisor's explanation. Discuss what additional history, examination or investigation would be needed rather than treating the text case as a complete patient.
 
-Models can detect patterns in radiology images, pathology slides and other modalities.
+For literature work, record study design, population, intervention, comparator, outcomes and limitations. Do not turn a promising abstract into a treatment recommendation. The [disease-discovery guide](27-ai-for-disease-discovery.md) explains the distinction between computational hypotheses and evidence of patient benefit.
 
-But model performance depends on the data distribution.
+## Evaluation and troubleshooting
 
-A model trained in one hospital can behave differently in another because of:
+Measure omission, unsupported addition, contradiction handling and reviewer correction time. Include unfamiliar phrasing and incomplete records. A high average score can hide a rare but serious failure, so inspect error categories and consequences. Evaluate across relevant settings before claiming transferability.
 
-- scanner hardware
-- acquisition protocols
-- demographics
-- disease prevalence
-- labeling practice
-- workflow differences
+If the model invents facts, reduce the task to extraction with source references and reject unsupported output. If a system creates extra work, measure review burden rather than assuming automation saves time. If different clinicians disagree about the reference answer, document the disagreement instead of forcing a false gold standard.
 
-Validation therefore needs more than one headline accuracy figure.
+## Practical project and outcome
 
-## Clinical language
+Build a fictional-note summarizer with twenty synthetic cases, a structured schema, a review checklist and an error report. No real patient data or clinical recommendations are needed. Ask a qualified educator to review its educational usefulness before sharing it as a training resource.
 
-Large language models can help summarize notes, extract fields, draft patient explanations and support literature review.
+Your portfolio should state exactly what was tested and what was not. The ambition is to help healthcare professionals work with clearer information and fewer avoidable errors. The next step is supervised learning and careful evaluation—not giving a prototype authority over a patient's care.
 
-They can also produce fluent unsupported statements.
+---
 
-A clinical assistant should expose:
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
 
-- source
-- date
-- retrieved evidence
-- observation
-- inference
-- uncertainty
-
-That is traceability.
-
-## Clinical safety architecture
-
-Suppose a model suggests a medication.
-
-A safer system is:
-
-model suggestion
-  -> retrieve formulary and interaction data
-  -> check allergies
-  -> check renal and hepatic context
-  -> check dose constraints
-  -> show rationale and evidence
-  -> clinician review
-  -> explicit action
-
-AI supplies a candidate.
-
-Deterministic systems verify constraints.
-
-A clinician owns the decision.
-
-## Research acceleration
-
-AI can reduce the time between a research question and a structured evidence set.
-
-A research assistant can:
-
-- search literature
-- cluster papers
-- extract study characteristics
-- compare endpoints
-- identify inconsistencies
-- draft evidence tables
-- flag gaps for human review
-
-It must not silently turn a paper abstract into a clinical conclusion.
-
-The important distinction is:
-
-**retrieval is evidence; generation is a hypothesis about the evidence.**
-
-## The safety line
-
-An AI output is not the same thing as a validated clinical decision.
-
-That line is not anti-AI.
-
-It is the condition that makes useful medical AI possible.
+— Kingsley Umoh · PharmWeb3

@@ -6,21 +6,6 @@ It is not.
 
 A model is one component inside a larger system containing context, retrieval, tools, memory, policies, logging and evaluation.
 
-<pre>
-┌─────────────────────────────────────────────────┐
-│                 AI APPLICATION                  │
-├─────────────────────────────────────────────────┤
-│ intent                                          │
-│   ↓                                             │
-│ context ← memory ← retrieval                   │
-│   ↓                                             │
-│ model ──► tool registry ──► external systems   │
-│   ↓                  │                          │
-│ output               side effects               │
-│   └────────► evidence + telemetry ◄────────────┘
-└─────────────────────────────────────────────────┘
-</pre>
-
 A useful definition is:
 
 **An AI system is a probabilistic decision component inside a deterministic software boundary.**
@@ -75,19 +60,6 @@ An agent with the credential can actually revoke it.
 
 That is a change in the failure model.
 
-<pre>
-MODEL OUTPUT
-     │
-     ▼
-CAPABILITY CHECK
- ┌───┼──────────┬──────────────┐
- ▼   ▼          ▼              ▼
-TEXT READ      WRITE         MONEY / CONTROL
- │    │          │              │
- ▼    ▼          ▼              ▼
-lower privacy   integrity    high consequence
-</pre>
-
 A production tool should declare:
 
 - inputs
@@ -135,29 +107,26 @@ A serious evaluation suite asks:
 - What happened when a tool timed out?
 - Did a provider change alter behavior?
 
-<pre>
-PROMPT / POLICY
-      │
-      ▼
-TEST CASES
-      │
-      ▼
-RUN
-      │
-      ▼
-MEASURE
-      │
-      ▼
-COMPARE
-   ┌──┴──┐
-   ▼     ▼
-PASS   REGRESSION
-  │        │
-promote   block
-</pre>
-
 Once you see the full system, an AI application stops looking like a chat window.
 
 It starts looking like distributed software.
 
 That is exactly what it is.
+
+## Build a system map you can inspect
+
+Take a fictional document assistant. List its components: user interface, authentication, retrieval index, model, output validator and audit record. For each component, write the data it receives, the authority it has and what happens when it fails. A search result is an observation, not a new instruction from the user.
+
+Use a plain JSON response with `answer`, `source_ids` and `uncertainties`. Validate its shape in code, then verify whether the cited sources actually support the answer. Schema validity is not factual correctness. A perfectly formatted false statement still fails the task.
+
+Start with five short documents and ten questions, including questions the documents cannot answer. A useful model must sometimes say that the evidence is insufficient. Compare direct prompting with retrieval from the same small corpus. Record unsupported claims, missing citations and refusal to answer answerable questions. The goal is a measured system, not a dramatic one-run demo.
+
+If retrieval returns irrelevant passages, repair chunking, metadata and query behavior before increasing model size. If answers leak between users, inspect access filtering at retrieval time. If a request times out, define an explicit retry policy and avoid repeating side effects. These are application design problems as much as model problems.
+
+The deliverable is a component map, a small evaluation set and a failure table. See [model setup](31-models-and-workspace.md) for candidate selection and [AI security](03-ai-security.md) for trust boundaries. The [NIST AI framework](https://www.nist.gov/itl/ai-risk-management-framework) is a governance reference for turning broad concerns into managed responsibilities.
+
+---
+
+If this has impacted you in any way, you can follow me on [GitHub](https://github.com/Profkingkeys), [X (Twitter)](https://x.com/Profkingkeys), and [LinkedIn](https://www.linkedin.com/in/prof-king-keys-110a24229).
+
+— Kingsley Umoh · PharmWeb3
