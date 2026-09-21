@@ -1,0 +1,13 @@
+{
+  "name": "ai-the-new-operating-layer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Quality and publishing tools for a technical AI book series.",
+  "scripts": {
+    "test": "node scripts/validate-book.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

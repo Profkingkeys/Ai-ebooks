@@ -1,0 +1,22 @@
+- [Home](README.md)
+- [Book map](BOOK.md)
+- **Volume I: The Machinery**
+  - [01 The Machine Before the Machine](chapters/01-the-machine-before-the-machine.md)
+  - [02 What an AI System Actually Is](chapters/02-what-an-ai-system-actually-is.md)
+  - [03 AI Security](chapters/03-ai-security.md)
+  - [04 Using AI to Defend Against AI](chapters/04-using-ai-to-defend-against-ai.md)
+- **Volume II: Institutions**
+  - [05 AI in Medicine](chapters/05-ai-in-medicine.md)
+  - [06 AI in Pharmacy](chapters/06-ai-in-pharmacy.md)
+  - [07 AI in Law](chapters/07-ai-in-law.md)
+  - [08 AI and the Economy](chapters/08-ai-and-the-economy.md)
+- **Volume III: The Builder**
+  - [09 Vibecoding](chapters/09-vibecoding.md)
+  - [10 Debugging](chapters/10-debugging.md)
+  - [11 Building New Things](chapters/11-building-things-that-did-not-exist.md)
+  - [12 The Future](chapters/12-the-future-and-what-could-trigger-it.md)
+- [Labs](LABS.md)
+- [Glossary](GLOSSARY.md)
+- [Evidence method](RESEARCH_METHOD.md)
+- [References](REFERENCES.md)
+- [Manuscript status](MANUSCRIPT_STATUS.md)

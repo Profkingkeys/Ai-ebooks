@@ -1,65 +1,82 @@
 # AI: The New Operating Layer
 
-A technical book series about what artificial intelligence is becoming, how it works underneath the interface, how it can be attacked, and how people can build with it without surrendering engineering judgment.
+**A technical field guide to building, securing, governing, and living with AI systems.**
 
-This repository is intentionally Markdown-first. Markdown is the source of truth because it is versionable, reviewable, diff-friendly, portable and easy to render into HTML, PDF and ebook formats later.
+Most AI writing stops at the model. This series follows the entire system: intent, context, retrieval, tools, memory, permissions, evidence, action, failure, and accountability.
 
-The visual language is part of the writing: dense HTML/Unicode diagrams, threat maps, workflow maps, tables and architecture sketches explain the machinery before the reader reaches the paragraph.
+[Start reading](BOOK.md) · [See manuscript status](MANUSCRIPT_STATUS.md) · [Use the labs](LABS.md) · [Review the method](RESEARCH_METHOD.md)
 
-## What this series covers
+## The central question
 
-- AI history, from symbolic reasoning to statistical learning to foundation models
-- AI security and practical defense
-- Using AI to defend people from AI-enabled scams, manipulation and impersonation
-- AI in medicine and clinical decision support
-- AI in pharmacy and medication systems
-- AI in law and evidence workflows
-- AI and the economy
-- Vibecoding
-- Debugging AI-generated software and AI systems
-- Building products that were previously too expensive or too slow to attempt
-- Possible AI futures and the technical triggers that could move systems from assistants toward delegated digital workers
+When software can read private data, generate decisions, call tools, write code, and trigger real actions, “How intelligent is the model?” is no longer enough.
 
-## Reading order
+The harder questions are:
 
-1. [The Book Map](BOOK.md)
-2. [01 - The Machine Before the Machine](chapters/01-the-machine-before-the-machine.md)
-3. [02 - What an AI System Actually Is](chapters/02-what-an-ai-system-actually-is.md)
-4. [03 - AI Security](chapters/03-ai-security.md)
-5. [04 - Using AI to Defend Against AI](chapters/04-using-ai-to-defend-against-ai.md)
-6. [05 - AI in Medicine](chapters/05-ai-in-medicine.md)
-7. [06 - AI in Pharmacy](chapters/06-ai-in-pharmacy.md)
-8. [07 - AI in Law](chapters/07-ai-in-law.md)
-9. [08 - AI and the Economy](chapters/08-ai-and-the-economy.md)
-10. [09 - Vibecoding](chapters/09-vibecoding.md)
-11. [10 - Debugging](chapters/10-debugging.md)
-12. [11 - Building Things That Did Not Exist](chapters/11-building-things-that-did-not-exist.md)
-13. [12 - The Future and What Could Trigger It](chapters/12-the-future-and-what-could-trigger-it.md)
+- What can the system reach?
+- Which evidence shaped the output?
+- What can manipulate it?
+- Who can authorize an action?
+- What remains when it fails?
 
-## Visual language
+```mermaid
+flowchart LR
+    H[Human intent] --> C[Context]
+    C --> M[Model]
+    D[Data and retrieval] --> M
+    M --> T[Tools]
+    T --> A[Action]
+    P[Policy and identity] --> T
+    A --> E[Evidence and telemetry]
+    E --> H
+```
 
-The source uses native HTML/Unicode diagrams so the visuals survive GitHub rendering and future conversion.
+## Three volumes
 
-<pre>
-HUMAN INTENT
-      │
-      ▼
-   CONTEXT
-      │
-      ▼
-    MODEL
-   ╱  │  ╲
-  ▼   ▼   ▼
-DATA TOOLS MEMORY
-  ╲   │   ╱
-    EVIDENCE
-       │
-       ▼
- HUMAN / POLICY GATE
-</pre>
+| Volume | Core problem | Chapters |
+|---|---|---|
+| **I. The Machinery** | How AI systems work and fail | history, system anatomy, AI security, defense |
+| **II. Institutions Under Pressure** | How AI changes high-stakes work | medicine, pharmacy, law, economy |
+| **III. The Builder** | How to create without surrendering judgment | vibecoding, debugging, new products, possible futures |
 
-## Editorial rule
+## What makes this a technical book
 
-The goal is not to make AI sound magical. The goal is to make it understandable enough that the reader can see both the leverage and the failure surface.
+Every mature chapter is being developed around the same evidence contract:
 
-Established engineering facts are presented as facts. Forecasts are labeled as forecasts. Medicine, law, finance and security sections distinguish research capability from validated professional deployment.
+1. **Hook:** a concrete failure, decision, or paradox
+2. **System model:** the parts and trust boundaries
+3. **Mechanism:** what happens under the interface
+4. **Failure surface:** how the system breaks or is abused
+5. **Build pattern:** an implementable architecture
+6. **Lab:** a reproducible exercise
+7. **Evidence ledger:** sources, date, confidence, and unresolved questions
+8. **Field checklist:** what the reader can use immediately
+
+## Current scope
+
+The repository already contains twelve readable foundation chapters. They are **not being presented as a finished textbook**. The next editorial pass expands them into long-form technical chapters with primary references, worked examples, threat models, evaluation rubrics, and reproducible labs.
+
+High-stakes material uses explicit boundaries:
+
+- medicine and pharmacy distinguish research support from clinical authorization
+- legal material distinguishes information workflows from legal advice
+- finance distinguishes analysis from execution
+- forecasts are labeled as forecasts
+- AI-generated claims are never treated as evidence merely because they sound precise
+
+## Build and validate
+
+```bash
+npm test
+```
+
+The validation pipeline checks chapter order, internal links, visual models, manuscript depth, and required publishing files. GitHub Actions runs it on every change and publishes the reading site through GitHub Pages.
+
+## Read online
+
+The repository includes a Docsify reading shell for GitHub Pages. Markdown remains the source of truth, so the same manuscript can later produce HTML, PDF, and EPUB editions.
+
+## Contribute
+
+Expert review is welcome across AI engineering, cybersecurity, medicine, pharmacy, law, economics, education, and technical editing. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and the [research method](RESEARCH_METHOD.md).
+
+> Build the mental model first. Then earn the right to automate the action.

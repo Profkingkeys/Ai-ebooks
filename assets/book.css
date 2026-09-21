@@ -1,0 +1,12 @@
+:root { --theme-color: #39e6b0; }
+body { color: #dfe9f5; background: #07111d; }
+.sidebar { background: #091725; border-right-color: #183149; }
+.sidebar ul li a { color: #adc0d4; }.sidebar ul li.active > a { color: #39e6b0; }
+.content { left: 300px; }.markdown-section { max-width: 850px; color: #dfe9f5; }
+.markdown-section h1, .markdown-section h2, .markdown-section h3 { color: #f7fbff; }
+.markdown-section code { color: #80f5d0; background: #0e2234; }
+.markdown-section blockquote { color: #b8c9d8; border-left-color: #39e6b0; }
+.markdown-section table { display: table; width: 100%; }.markdown-section tr:nth-child(2n) { background: #0d2031; }
+.markdown-section th, .markdown-section td { border-color: #24415a; }
+pre { border: 1px solid #23465e; border-radius: .75rem; background: #081522 !important; }
+@media (max-width: 768px) { .content { left: 0; } }

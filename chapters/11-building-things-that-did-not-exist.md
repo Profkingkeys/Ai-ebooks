@@ -96,6 +96,35 @@ AI can generate ten products.
 
 That does not mean any one deserves to exist.
 
+## Start with the decision, not the spectacle
+
+An impressive interface can hide an empty product. A stronger design begins by naming the decision that changes an outcome.
+
+Consider a health-learning simulation. “Build a 3D house” is a rendering task. “Help a child rehearse washing hands after using the toilet and before touching food” is a product hypothesis.
+
+<pre>
+USER + CONTEXT
+      │
+      ▼
+OBSERVABLE DECISION
+      │
+      ▼
+SAFE CONSEQUENCE
+      │
+      ▼
+EXPLANATION
+      │
+      ▼
+RETRY
+      │
+      ▼
+LEARNING EVIDENCE
+</pre>
+
+Once the loop is explicit, technology choices become easier. Three.js can deliver the browser experience. A small state machine can own the rules. Tests can exercise correct and incorrect routes without rendering a single frame. Telemetry can measure progression without collecting a child's identity.
+
+That is how a strange new idea becomes an inspectable system rather than a cinematic demo.
+
 ## Build the impossible-looking prototype
 
 Decompose the idea:

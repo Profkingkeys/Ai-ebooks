@@ -114,6 +114,34 @@ AI can assist triage, documentation and communication.
 
 Deterministic rules should enforce high-confidence constraints.
 
+## Simulation before automation
+
+Some pharmacy problems are better served first by simulation than by a chatbot.
+
+Extemporaneous dispensing contains observable decisions: prescription verification, material identification, contamination avoidance, sequencing, packaging, labeling and counseling. A virtual lab can make those decisions visible without pretending to replace supervised practical training.
+
+<pre>
+LEARNING OBJECTIVE
+        │
+        ▼
+SCENARIO STATE ─────► 3D RENDERER
+        │                  │
+        ▼                  ▼
+DECISION ENGINE ◄──── PLAYER ACTION
+        │
+   ┌────┴────┐
+   ▼         ▼
+FEEDBACK   AUDIT EVENT
+   │         │
+   └────┬────┘
+        ▼
+RETRY + REFLECTION
+</pre>
+
+The renderer may be Three.js in a browser or Filament in a native application. The important engineering choice is to keep the educational rules outside the renderer. That makes progression testable and lets reviewers inspect exactly why a choice passes or fails.
+
+AI can later adapt explanations, identify repeated misconceptions or help instructors create scenario variants. It should not silently rewrite the correct dispensing sequence or invent a preparation formula. Curriculum content, deterministic safety gates and pharmacist review remain authoritative.
+
 ## The future pharmacy
 
 The most interesting pharmacy AI may not look like a chatbot.
